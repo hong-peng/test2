@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="renderer" content="webkit"><title>恒泰证券投资者教育基地</title><!--[if lt IE 9]>
+    <script src="../static/polyfills/es5-shim.min.js"></script>
+    <script src="../static/polyfills/es5-sham.min.js"></script>
+    <script src="../static/polyfills/json3.min.js"></script>
+    <script src="../static/polyfills/respond.min.js"></script>
+    <script src="../static/polyfills/console-polyfill.min.js"></script>
+  <![endif]--><link href="../css/common~detail~detailVideo~feedback~home~intro~list~listVideo~search.40b7baa0ecbeda38e31e.css" rel="stylesheet"><link href="../css/common~list~listVideo~search.221a62cb281721a730a2.css" rel="stylesheet"><link href="../css/search.ef77278d73edfcb12949.css" rel="stylesheet"></head><body><div id="container"><div id="header"><div class="header_content w1280"><div class="top"><div class="logoArea"><a href="../home" class="logo">恒泰证券投资者教育基地</a> <i class="splitLine"></i><h1>投资者教育基地</h1></div><div class="searchArea"><input id="searchInput" class="searchInput" type="text" placeholder="请输入要搜索的关键字"> <i id="searchIcon" class="searchIcon"></i></div></div><div id="header_navs" class="header_navs"></div></div></div><script id="tpl-header_nav" type="text/html">{{each $data val key}}
+      {{if val.children}}
+         <div class="nav withSubnav" data-code="{{val.code}}">
+            <a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a>
+            <ul class="subnavs">
+               {{include 'tpl-header_subnav' val.children}}
+            </ul>
+         </div>
+      {{else}}
+         <div class="nav" data-code="{{val.code}}">
+            <a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a>
+         </div>
+      {{/if}}
+   {{/each}}</script><script id="tpl-header_subnav" type="text/html">{{each $data val key}}
+   <li class="subnav" data-code="{{val.code}}"><a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a></li>
+   {{/each}}</script><div id="contentBody" class="w1280"><div class="topWrap"><div class="resultNum">共搜索到 <span id="resultNum" class="highlight">-</span> 个结果</div><div id="filterBox" class="filterBox"><div class="item active" data-type="">全部</div><div class="item" data-type="1">文章</div><div class="item" data-type="3">视频</div></div></div><div id="listWrap" class="listWrap"><div class="item video"></div></div><ul class="pagination" id="pagination"></ul></div><div id="footer"><div class="footer_content clearfix w1280"><div class="item">本公司开展网上证券业务已经中国证券监督管理委员会核准</div><div class="item">公 司 总 部 ： 北京西城区金融大街17号中国人寿中心11层</div><div class="item">版权所有 2018-2019恒泰证券股份有限公司</div><div class="item">蒙ICP备05003259号 蒙公网安备 15010502000352号</div><div class="item">Copyright 2018.HengTai Securities CO.,LTD All Rights Reserved</div></div></div></div><script src="../js/manifest.8b0971b6ec.js"></script><script src="../chunk/common~detail~detailVideo~feedback~home~intro~list~listVideo~search~vendor.258db3a724.js"></script><script src="../chunk/vendor.a9aea43763.js"></script><script src="../chunk/common~detail~detailVideo~feedback~home~intro~list~listVideo~search.95e1be771a.js"></script><script src="../chunk/common~detail~feedback~home~intro~search.3ba0e5e89e.js"></script><script src="../chunk/common~list~listVideo~search.afd176aaff.js"></script><script src="../chunk/search.0ce858402f.js"></script></body></html><script id="tpl-item" type="text/html">{{each $data val key}}
+  <a href="../{{val.message_type == 3 ? 'detailVideo' : 'detail'}}?id={{val.id}}" target="_blank" class="item clearfix{{val.message_type == 3 ? ' video' : ''}}">
+    {{if val.message_type == 3}}
+    <div class="poster" style="background-image: url({{val.big_picture}})">
+      <div class="icon"></div>
+    </div>
+    {{/if}}
+    <div class="item_content">
+      <div class="item_content_title">{{@val.title}}</div>
+      <div class="item_content_desc dotdotdot">{{@val.desc}}</div>
+      <div class="item_content_time">{{val.issuer_date}}</div>
+    </div>
+  </a>
+  {{/each}}</script>

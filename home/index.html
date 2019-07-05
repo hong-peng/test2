@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="renderer" content="webkit"><title>恒泰证券投资者教育基地</title><!--[if lt IE 9]>
+   <script src="../static/polyfills/es5-shim.min.js"></script>
+   <script src="../static/polyfills/es5-sham.min.js"></script>
+   <script src="../static/polyfills/json3.min.js"></script>
+   <script src="../static/polyfills/respond.min.js"></script>
+   <script src="../static/polyfills/console-polyfill.min.js"></script>
+   <![endif]--><link href="../css/common~detail~detailVideo~feedback~home~intro~list~listVideo~search.40b7baa0ecbeda38e31e.css" rel="stylesheet"><link href="../css/home.4ca9dec38bb1d92db8d3.css" rel="stylesheet"></head><body><div id="container"><div id="header"><div class="header_content w1280"><div class="top"><div class="logoArea"><a href="../home" class="logo">恒泰证券投资者教育基地</a> <i class="splitLine"></i><h1>投资者教育基地</h1></div><div class="searchArea"><input id="searchInput" class="searchInput" type="text" placeholder="请输入要搜索的关键字"> <i id="searchIcon" class="searchIcon"></i></div></div><div id="header_navs" class="header_navs"></div></div></div><script id="tpl-header_nav" type="text/html">{{each $data val key}}
+      {{if val.children}}
+         <div class="nav withSubnav" data-code="{{val.code}}">
+            <a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a>
+            <ul class="subnavs">
+               {{include 'tpl-header_subnav' val.children}}
+            </ul>
+         </div>
+      {{else}}
+         <div class="nav" data-code="{{val.code}}">
+            <a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a>
+         </div>
+      {{/if}}
+   {{/each}}</script><script id="tpl-header_subnav" type="text/html">{{each $data val key}}
+   <li class="subnav" data-code="{{val.code}}"><a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a></li>
+   {{/each}}</script><div id="contentBody" class="w1280"><div class="toFeedBack">还想知道哪些投教知识？或者对恒泰投教基地有什么建议？快来填个问卷吧。<a href="../feedback" target="_blank">立即填写</a></div><div id="banner_swiper" class="banner swiper-container"><div id="banner_swiper-wrapper" class="swiper-wrapper"></div><button class="button prev"></button> <button class="button next"></button><div class="pagination"></div></div><div class="tjzx column"><div id="tjzx_list" class="column_list"></div><a href="../list?code=web_tjzx" id="tjzx_more" class="more" userlog data-userlog-code="web_tjzx" data-userlog-module="投教资讯">查看更多</a></div><div class="tjsp column clearfix"><div class="column_title"><h2 id="tjsp_title"></h2><p id="tjsp_desc" class="desc"></p><a href="../listVideo?code=web_zjjt" id="tjsp_more" class="more" userlog data-userlog-code="web_zjjt" data-userlog-module="专家讲堂">查看更多</a></div><div id="tjsp_list" class="column_list"><div class="column_list_innerWrap"></div></div></div><div class="tzkt column"><div class="column_title"><h2 id="tzkt_title"></h2><p id="tzkt_desc" class="desc"></p></div><div id="tzkt_list" class="column_list"></div></div></div><div id="footer"><div class="footer_content clearfix w1280"><div class="item">本公司开展网上证券业务已经中国证券监督管理委员会核准</div><div class="item">公 司 总 部 ： 北京西城区金融大街17号中国人寿中心11层</div><div class="item">版权所有 2018-2019恒泰证券股份有限公司</div><div class="item">蒙ICP备05003259号 蒙公网安备 15010502000352号</div><div class="item">Copyright 2018.HengTai Securities CO.,LTD All Rights Reserved</div></div></div></div><script src="../js/manifest.8b0971b6ec.js"></script><script src="../chunk/common~detail~detailVideo~feedback~home~intro~list~listVideo~search~vendor.258db3a724.js"></script><script src="../chunk/vendor.a9aea43763.js"></script><script src="../chunk/common~detail~detailVideo~feedback~home~intro~list~listVideo~search.95e1be771a.js"></script><script src="../chunk/common~detail~feedback~home~intro~search.3ba0e5e89e.js"></script><script src="../chunk/common~home~listVideo.2e733a3e7a.js"></script><script src="../chunk/home.2952ccb19e.js"></script></body></html><script id="tpl-banner_swiper-slide" type="text/html">{{each $data val key}}
+   <div class="{{val.hyperlink ? 'withLink ' : ''}}swiper-slide" data-href="{{val.hyperlink}}">
+      {{if val.hyperlink}}
+      <a href="{{val.hyperlink}}" target="_blank">
+         <img src="{{val.bigPicture}}" alt="{{val.title}}">
+      </a>
+      {{/if}}
+      {{if !val.hyperlink}}
+      <a href="{{'javascript:void(0);'}}">
+         <img src="{{val.bigPicture}}" alt="{{val.title}}">
+      </a>
+      {{/if}}
+   </div>
+   {{/each}}</script><script id="tpl-item-tjzx" type="text/html">{{each $data val key}}
+   <a href="../detail?code=web_tjzx&id={{val.id}}"
+      target="_blank"
+      class="itemWrap"
+      userlog
+      data-userlog-id="{{val.id}}"
+      data-userlog-code="web_tjzx"
+      data-userlog-module="{{val.title}}">
+      <div class="item clearfix">
+         <div class="right">
+            <img src="{{val.thumbnail}}" alt="{{val.title}}">
+         </div>
+         <div class="left">
+            <h3 class="title">{{val.title}}</h3>
+            <div class="desc dotdotdot">{{@ val.desc }}</div>
+            <p class="time">{{val.issuerDate.split(" ")[0]}}</p>
+         </div>
+      </div>
+   </a>
+   {{/each}}</script><script id="tpl-item-tjsp" type="text/html">{{each $data val key}}
+   <a href="../detailVideo?code=web_zjjt&id={{val.id}}"
+      target="_blank"
+      class="item"
+      userlog
+      data-userlog-id="{{val.id}}"
+      data-userlog-code="web_zjjt"
+      data-userlog-module="{{val.title}}">
+      <div class="poster" style="background-image: url({{val.bigPicture}})">
+         <div class="icon"></div>
+      </div>
+      <div class="item_title">{{val.title}}</div>
+   </a>
+   {{/each}}</script><script id="tpl-item-tjkt" type="text/html">{{each $data val key}}
+   <a href="../list?code=web_tzkt&code={{val.code}}"
+      class="item"
+      userlog
+      data-userlog-code="{{val.code}}"
+      data-userlog-module="{{val.name}}">
+      <div class="img" style="background-image: url({{val.smallImg}})"></div>
+      <h3 class="name">{{val.name}}</h3>
+      <p class="desc">{{val.remark}}</p>
+   </a>
+   {{/each}}</script>

@@ -1,0 +1,1 @@
+.crumbNav{height:22px;font-size:16px;padding:18px 0}.crumbNav .item{cursor:pointer;text-decoration:none;padding:0 10px 0 2px;position:relative;color:#999}.crumbNav .item:hover{color:#333}.crumbNav .item:after{content:"|";position:absolute;top:0;right:0;color:#999;margin-top:-5px}.crumbNav .item:first-child{padding-left:0}

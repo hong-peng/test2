@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="renderer" content="webkit"><title>恒泰证券投资者教育基地</title><!--[if lt IE 9]>
+   <script src="../static/polyfills/es5-shim.min.js"></script>
+   <script src="../static/polyfills/es5-sham.min.js"></script>
+   <script src="../static/polyfills/json3.min.js"></script>
+   <script src="../static/polyfills/respond.min.js"></script>
+   <script src="../static/polyfills/console-polyfill.min.js"></script>
+   <![endif]--><link href="../css/common~detail~detailVideo~feedback~home~intro~list~listVideo~search.40b7baa0ecbeda38e31e.css" rel="stylesheet"><link href="../css/common~detail~detailVideo~feedback.5a667b516c540d5fb336.css" rel="stylesheet"><link href="../css/detailVideo.d8899cbac4b29ea1147f.css" rel="stylesheet"></head><body><div id="container"><div id="header"><div class="header_content w1280"><div class="top"><div class="logoArea"><a href="../home" class="logo">恒泰证券投资者教育基地</a> <i class="splitLine"></i><h1>投资者教育基地</h1></div><div class="searchArea"><input id="searchInput" class="searchInput" type="text" placeholder="请输入要搜索的关键字"> <i id="searchIcon" class="searchIcon"></i></div></div><div id="header_navs" class="header_navs"></div></div></div><script id="tpl-header_nav" type="text/html">{{each $data val key}}
+      {{if val.children}}
+         <div class="nav withSubnav" data-code="{{val.code}}">
+            <a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a>
+            <ul class="subnavs">
+               {{include 'tpl-header_subnav' val.children}}
+            </ul>
+         </div>
+      {{else}}
+         <div class="nav" data-code="{{val.code}}">
+            <a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a>
+         </div>
+      {{/if}}
+   {{/each}}</script><script id="tpl-header_subnav" type="text/html">{{each $data val key}}
+   <li class="subnav" data-code="{{val.code}}"><a href="{{val.href}}" class="navName" userlog data-userlog-code="{{val.code}}" data-userlog-module="{{val.name}}">{{val.name}}</a></li>
+   {{/each}}</script><div id="contentBody" class="w1280"><div class="contentWidth"><div class="crumbNav" id="crumbNav"><a id="homepageBtn" class="item">首页</a></div><script id="tpl-crumbNav" type="text/html">{{each list}}
+   <a class="item crumbItem" data-code="{{$value.code}}" href="{{$value.href || 'javascript://'}}">{{$value.name}}</a>
+   {{/each}}</script><div class="content clearfix"><div class="leftContainer"><div id="title" class="title">--</div><div class="desc"><span>播放量 <span id="readCount" class="readCount">--</span></span></div><div class="video"><video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered"><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video></div><div id="text" class="text">--</div></div><div id="rightContainer" class="rightContainer"><div class="name">最热视频</div><div id="hotList" class="hotList"></div></div></div></div></div><div id="footer"><div class="footer_content clearfix w1280"><div class="item">本公司开展网上证券业务已经中国证券监督管理委员会核准</div><div class="item">公 司 总 部 ： 北京西城区金融大街17号中国人寿中心11层</div><div class="item">版权所有 2018-2019恒泰证券股份有限公司</div><div class="item">蒙ICP备05003259号 蒙公网安备 15010502000352号</div><div class="item">Copyright 2018.HengTai Securities CO.,LTD All Rights Reserved</div></div></div></div><script src="../js/manifest.8b0971b6ec.js"></script><script src="../chunk/common~detail~detailVideo~feedback~home~intro~list~listVideo~search~vendor.258db3a724.js"></script><script src="../chunk/vendor.a9aea43763.js"></script><script src="../chunk/common~detail~detailVideo~feedback~home~intro~list~listVideo~search.95e1be771a.js"></script><script src="../chunk/common~detail~detailVideo~feedback.68fb4916d8.js"></script><script src="../chunk/detailVideo.735b33b831.js"></script></body></html><script id="tpl-list" type="text/html">{{each list}}
+   <a href="../detailVideo?id={{$value.id}}{{$value.params}}" target="_blank" class="item" data-id="{{$value.id}}">{{$value.title}}</a>
+   {{/each}}</script>
